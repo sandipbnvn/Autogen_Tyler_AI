@@ -4,7 +4,7 @@ import dotenv
 dotenv.load_dotenv()
 
 config_list = autogen.config_list_from_dotenv(
-    ".env",
+    "../.env",
     {"gpt-4o-mini": "OPENAI_API_KEY"}
 )
 
@@ -53,7 +53,7 @@ critic = autogen.AssistantAgent(
     llm_config=llm_config,
 )
 group_chat = autogen.GroupChat(
-    agents=[user_proxy, engineer, scientist, planner, critic], messages=[], max_round=12
+    agents=[user_proxy, engineer, scientist, planner, critic], messages=[], max_round=6
 )
 manager = autogen.GroupChatManager(groupchat=group_chat, llm_config=llm_config)
 

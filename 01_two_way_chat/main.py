@@ -27,7 +27,7 @@ def main():
         }
     )
 
-    user_proxy.initiate_chat(assistant, message="List top 10 Indian Companies by Revenue as of today")
+    user_proxy.initiate_chat(assistant, message="Give me weather for 4 metros in India")
 
 
 if __name__ == "__main__":
